@@ -3,19 +3,20 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'drawer2020_model.dart';
-export 'drawer2020_model.dart';
+import 'drawer_model.dart';
+export 'drawer_model.dart';
 
-class Drawer2020Widget extends StatefulWidget {
-  const Drawer2020Widget({super.key});
+class DrawerWidget extends StatefulWidget {
+  const DrawerWidget({super.key});
 
   @override
-  State<Drawer2020Widget> createState() => _Drawer2020WidgetState();
+  State<DrawerWidget> createState() => _DrawerWidgetState();
 }
 
-class _Drawer2020WidgetState extends State<Drawer2020Widget> {
-  late Drawer2020Model _model;
+class _DrawerWidgetState extends State<DrawerWidget> {
+  late DrawerModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -26,7 +27,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Drawer2020Model());
+    _model = createModel(context, () => DrawerModel());
   }
 
   @override
@@ -40,58 +41,86 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(30.0, 40.0, 0.0, 0.0),
-                    child: Container(
-                      width: 234.0,
-                      height: 55.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.asset(
-                            'assets/images/logo-small_1.png',
-                          ).image,
+    return Container(
+      width: 300.0,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        color: FlutterFlowTheme.of(context).secondaryBackground,
+      ),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(15.0, 40.0, 0.0, 0.0),
+                  child: Container(
+                    width: 241.0,
+                    height: 55.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: Image.asset(
+                          'assets/images/logo-small_1.png',
+                        ).image,
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: const AlignmentDirectional(1.0, -1.0),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed('testttt12');
+                        },
+                        child: const Icon(
+                          Icons.cancel,
+                          color: Color(0xFFE70808),
+                          size: 30.0,
                         ),
                       ),
                     ),
                   ),
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        'x2wrq69n' /* Academic Session: 2023 - 2024 */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.w600,
-                          ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 0.0, 0.0),
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      'ra67t3ks' /* Academic Session: 2023 - 2024 */,
                     ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Inter',
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          useGoogleFonts:
+                              GoogleFonts.asMap().containsKey('Inter'),
+                        ),
                   ),
-                ],
-              ),
-              Padding(
+                ),
+              ],
+            ),
+            Align(
+              alignment: const AlignmentDirectional(-1.0, 0.0),
+              child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                 child: Container(
-                  width: double.infinity,
+                  width: 300.0,
                   height: 1202.0,
                   decoration: const BoxDecoration(
                     color: Color(0xFFB80900),
@@ -108,7 +137,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'kmamlmre' /* Dashboard */,
+                              '09o8iljj' /* Dashboard */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -116,6 +145,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -130,7 +161,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'pmi74ctr' /* Profile */,
+                              'bo4bc7cf' /* Profile */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -138,6 +169,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -152,7 +185,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'm7ekk9a1' /* Teachers */,
+                              'ed4k1503' /* Teachers */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -160,6 +193,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -174,7 +209,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              '0y74qubz' /* Time Table */,
+                              'm8vm34qo' /* Time Table */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -182,6 +217,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -196,7 +233,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'ck45v1fk' /* Homeworks */,
+                              'ges15chm' /* Homeworks */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -204,6 +241,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -218,7 +257,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'x57qr8f0' /* Events */,
+                              'wgzha19f' /* Events */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -226,6 +265,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -240,7 +281,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'h7vb3t6k' /* Academic Subjects */,
+                              'd0x3hnc3' /* Academic Subjects */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -248,6 +289,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -262,7 +305,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'okhz350x' /* Fees History */,
+                              'th16ff23' /* Fees History */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -270,6 +313,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -284,7 +329,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'sc2j1txo' /* Bus Information */,
+                              'j1vjain8' /* Bus Information */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -292,6 +337,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -306,7 +353,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'hfc0wh70' /* Write To School */,
+                              'd11iqmsh' /* Write To School */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -314,6 +361,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -328,7 +377,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                           ),
                           title: Text(
                             FFLocalizations.of(context).getText(
-                              'kp6dm6b7' /* Notifications / Alerts */,
+                              'xj13e0hv' /* Notifications / Alerts */,
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .titleLarge
@@ -336,6 +385,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                   fontSize: 14.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Inter'),
                                 ),
                           ),
                           tileColor:
@@ -353,7 +404,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                             ),
                             title: Text(
                               FFLocalizations.of(context).getText(
-                                'ltm3cz48' /* Settings */,
+                                'qg8twwuw' /* Settings */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge
@@ -361,6 +412,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                     fontFamily: 'Inter',
                                     color: Colors.white,
                                     fontSize: 14.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey('Inter'),
                                   ),
                             ),
                             tileColor: FlutterFlowTheme.of(context)
@@ -381,7 +434,7 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                   print('Button pressed ...');
                                 },
                                 text: FFLocalizations.of(context).getText(
-                                  't1abq2c6' /* LOGOUT */,
+                                  '5m4m0n1p' /* LOGOUT */,
                                 ),
                                 icon: const Icon(
                                   Icons.logout_outlined,
@@ -400,6 +453,8 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                                       .override(
                                         fontFamily: 'Inter',
                                         color: const Color(0xFFB80900),
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey('Inter'),
                                       ),
                                   elevation: 3.0,
                                   borderSide: const BorderSide(
@@ -417,10 +472,10 @@ class _Drawer2020WidgetState extends State<Drawer2020Widget> {
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

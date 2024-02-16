@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'drawer2022_model.dart';
 export 'drawer2022_model.dart';
@@ -78,6 +79,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                         fontFamily: 'Inter',
                         fontSize: 15.0,
                         fontWeight: FontWeight.w600,
+                        useGoogleFonts:
+                            GoogleFonts.asMap().containsKey('Inter'),
                       ),
                 ),
               ),
@@ -109,6 +112,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -129,6 +134,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -149,6 +156,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -169,6 +178,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -189,6 +200,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -209,6 +222,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -229,6 +244,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -249,6 +266,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -269,6 +288,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -289,6 +310,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -309,6 +332,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                               fontFamily: 'Inter',
                               color: Colors.white,
                               fontSize: 14.0,
+                              useGoogleFonts:
+                                  GoogleFonts.asMap().containsKey('Inter'),
                             ),
                       ),
                       tileColor:
@@ -328,12 +353,15 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                           FFLocalizations.of(context).getText(
                             '4id3mfcf' /* Settings */,
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                    fontSize: 14.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .titleLarge
+                              .override(
+                                fontFamily: 'Inter',
+                                color: Colors.white,
+                                fontSize: 14.0,
+                                useGoogleFonts:
+                                    GoogleFonts.asMap().containsKey('Inter'),
+                              ),
                         ),
                         tileColor:
                             FlutterFlowTheme.of(context).secondaryBackground,
@@ -372,6 +400,8 @@ class _Drawer2022WidgetState extends State<Drawer2022Widget> {
                                   .override(
                                     fontFamily: 'Inter',
                                     color: const Color(0xFFB80900),
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey('Inter'),
                                   ),
                               elevation: 3.0,
                               borderSide: const BorderSide(

@@ -6,7 +6,6 @@ export '/write_to_school/write_to_school_widget.dart' show WriteToSchoolWidget;
 export '/fess_history/fess_history_widget.dart' show FessHistoryWidget;
 export '/upcomingevents/upcomingevents_widget.dart' show UpcomingeventsWidget;
 export '/testttt12/testttt12_widget.dart' show Testttt12Widget;
-export '/test333/test333_widget.dart' show Test333Widget;
 export '/newwwwww/newwwwww_widget.dart' show NewwwwwwWidget;
-export '/drawerrrrrrrr2021/drawerrrrrrrr2021_widget.dart'
-    show Drawerrrrrrrr2021Widget;
+export '/sujiii123/sujiii123_widget.dart' show Sujiii123Widget;
+export '/kumar/kumar_widget.dart' show KumarWidget;

@@ -1,27 +1,26 @@
-import '/components/nav_bar_with_middle_button_widget.dart';
+import '/components/nav_bar_floting_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'test333_widget.dart' show Test333Widget;
+import 'sujiii123_widget.dart' show Sujiii123Widget;
 import 'package:flutter/material.dart';
 
-class Test333Model extends FlutterFlowModel<Test333Widget> {
+class Sujiii123Model extends FlutterFlowModel<Sujiii123Widget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Model for NavBarWithMiddleButton component.
-  late NavBarWithMiddleButtonModel navBarWithMiddleButtonModel;
+  // Model for NavBarFloting component.
+  late NavBarFlotingModel navBarFlotingModel;
 
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
-    navBarWithMiddleButtonModel =
-        createModel(context, () => NavBarWithMiddleButtonModel());
+    navBarFlotingModel = createModel(context, () => NavBarFlotingModel());
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    navBarWithMiddleButtonModel.dispose();
+    navBarFlotingModel.dispose();
   }
 
   /// Action blocks are added here.

@@ -6,25 +6,25 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'newwwwww_model.dart';
-export 'newwwwww_model.dart';
+import 'kumar_model.dart';
+export 'kumar_model.dart';
 
-class NewwwwwwWidget extends StatefulWidget {
-  const NewwwwwwWidget({super.key});
+class KumarWidget extends StatefulWidget {
+  const KumarWidget({super.key});
 
   @override
-  State<NewwwwwwWidget> createState() => _NewwwwwwWidgetState();
+  State<KumarWidget> createState() => _KumarWidgetState();
 }
 
-class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
-  late NewwwwwwModel _model;
+class _KumarWidgetState extends State<KumarWidget> {
+  late KumarModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => NewwwwwwModel());
+    _model = createModel(context, () => KumarModel());
   }
 
   @override
@@ -65,9 +65,9 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 40.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(15.0, 40.0, 0.0, 0.0),
                       child: Container(
-                        width: 234.0,
+                        width: 241.0,
                         height: 55.0,
                         decoration: BoxDecoration(
                           color:
@@ -111,10 +111,10 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 4.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
-                          'ijlrbqfn' /* Academic Session: 2023 - 2024 */,
+                          'l8zyjvct' /* Academic Session: 2023 - 2024 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
@@ -150,7 +150,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'rmnighio' /* Dashboard */,
+                                  'w5fwayfd' /* Dashboard */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -174,7 +174,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'yc4rpxks' /* Profile */,
+                                  '5xzrshf1' /* Profile */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -198,7 +198,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'jgn7s6wj' /* Teachers */,
+                                  'jt1de2gm' /* Teachers */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -222,7 +222,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  '0m0cdae2' /* Time Table */,
+                                  'kajax9dl' /* Time Table */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -246,7 +246,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'm771j3nf' /* Homeworks */,
+                                  'iaepolfq' /* Homeworks */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -270,7 +270,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'w82eprm3' /* Events */,
+                                  'j418tz29' /* Events */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -294,7 +294,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  '6s3ul62x' /* Academic Subjects */,
+                                  '2makfep8' /* Academic Subjects */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -318,7 +318,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  '1n0mc7if' /* Fees History */,
+                                  '2jflxvua' /* Fees History */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -342,7 +342,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'fyn3oqtr' /* Bus Information */,
+                                  '3t51uzbr' /* Bus Information */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -366,7 +366,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'sbbwi47r' /* Write To School */,
+                                  '33mjyymp' /* Write To School */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -390,7 +390,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                               ),
                               title: Text(
                                 FFLocalizations.of(context).getText(
-                                  'lp0k1aze' /* Notifications / Alerts */,
+                                  'ohj6qmyi' /* Notifications / Alerts */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -417,7 +417,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                                 ),
                                 title: Text(
                                   FFLocalizations.of(context).getText(
-                                    'nyrv4z5c' /* Settings */,
+                                    '9qzfcbze' /* Settings */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleLarge
@@ -447,7 +447,7 @@ class _NewwwwwwWidgetState extends State<NewwwwwwWidget> {
                                       print('Button pressed ...');
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'qrmnwg5f' /* LOGOUT */,
+                                      '529450ni' /* LOGOUT */,
                                     ),
                                     icon: const Icon(
                                       Icons.logout_outlined,

@@ -7,6 +7,7 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'login1_model.dart';
 export 'login1_model.dart';
@@ -317,6 +318,8 @@ class _Login1WidgetState extends State<Login1Widget>
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Inter',
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey('Inter'),
                                       ),
                                   validator: _model
                                       .emailAddressControllerValidator
@@ -405,6 +408,8 @@ class _Login1WidgetState extends State<Login1Widget>
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Inter',
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey('Inter'),
                                       ),
                                   validator: _model.passwordControllerValidator
                                       .asValidator(context),
@@ -501,6 +506,8 @@ class _Login1WidgetState extends State<Login1Widget>
                                         .titleSmall
                                         .override(
                                           fontFamily: 'Inter',
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey('Inter'),
                                         ),
                                     elevation: 3.0,
                                     borderSide: const BorderSide(
@@ -542,6 +549,8 @@ class _Login1WidgetState extends State<Login1Widget>
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Inter',
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey('Inter'),
                                         ),
                                     elevation: 0.0,
                                     borderSide: BorderSide(
@@ -584,6 +593,8 @@ class _Login1WidgetState extends State<Login1Widget>
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Inter',
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey('Inter'),
                                   ),
                             ),
                         ],

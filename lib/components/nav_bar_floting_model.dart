@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'navbar_widget.dart' show NavbarWidget;
+import 'nav_bar_floting_widget.dart' show NavBarFlotingWidget;
 import 'package:flutter/material.dart';
 
-class NavbarModel extends FlutterFlowModel<NavbarWidget> {
+class NavBarFlotingModel extends FlutterFlowModel<NavBarFlotingWidget> {
   /// Initialization and disposal methods.
 
   @override

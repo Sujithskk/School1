@@ -1,15 +1,21 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'drawer2020_widget.dart' show Drawer2020Widget;
+import 'kumar_widget.dart' show KumarWidget;
 import 'package:flutter/material.dart';
 
-class Drawer2020Model extends FlutterFlowModel<Drawer2020Widget> {
+class KumarModel extends FlutterFlowModel<KumarWidget> {
+  ///  State fields for stateful widgets in this page.
+
+  final unfocusNode = FocusNode();
+
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {}
+  void dispose() {
+    unfocusNode.dispose();
+  }
 
   /// Action blocks are added here.
 

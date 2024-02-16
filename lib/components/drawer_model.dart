@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'custom_nav_bar_widget.dart' show CustomNavBarWidget;
+import 'drawer_widget.dart' show DrawerWidget;
 import 'package:flutter/material.dart';
 
-class CustomNavBarModel extends FlutterFlowModel<CustomNavBarWidget> {
+class DrawerModel extends FlutterFlowModel<DrawerWidget> {
   /// Initialization and disposal methods.
 
   @override

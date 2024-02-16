@@ -1,10 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'nav_bar_with_middle_button_widget.dart'
-    show NavBarWithMiddleButtonWidget;
+import 'nav_bar_floting2_widget.dart' show NavBarFloting2Widget;
 import 'package:flutter/material.dart';
 
-class NavBarWithMiddleButtonModel
-    extends FlutterFlowModel<NavBarWithMiddleButtonWidget> {
+class NavBarFloting2Model extends FlutterFlowModel<NavBarFloting2Widget> {
   /// Initialization and disposal methods.
 
   @override

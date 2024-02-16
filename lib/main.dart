@@ -120,7 +120,6 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomeWork': const HomeWorkWidget(),
       'NoticeBoard': const NoticeBoardWidget(),
-      'testttt12': const Testttt12Widget(),
       'WriteToSchool': const WriteToSchoolWidget(),
       'FessHistory': const FessHistoryWidget(),
     };
@@ -128,70 +127,67 @@ class _NavBarPageState extends State<NavBarPage> {
 
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (i) => setState(() {
-          _currentPage = null;
-          _currentPageName = tabs.keys.toList()[i];
-        }),
-        backgroundColor: Colors.white,
-        selectedItemColor: const Color(0xFFB80900),
-        unselectedItemColor: const Color(0x8A000000),
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: const Icon(
-              Icons.work_history,
-              size: 24.0,
+      bottomNavigationBar: Visibility(
+        visible: responsiveVisibility(
+          context: context,
+          tabletLandscape: false,
+          desktop: false,
+        ),
+        child: BottomNavigationBar(
+          currentIndex: currentIndex,
+          onTap: (i) => setState(() {
+            _currentPage = null;
+            _currentPageName = tabs.keys.toList()[i];
+          }),
+          backgroundColor: Colors.white,
+          selectedItemColor: const Color(0xFFB80900),
+          unselectedItemColor: const Color(0x8A000000),
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          type: BottomNavigationBarType.fixed,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: const Icon(
+                Icons.work_history,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'jf9muglb' /* Home Work */,
+              ),
+              tooltip: '',
             ),
-            label: FFLocalizations.of(context).getText(
-              'jf9muglb' /* Home Work */,
+            BottomNavigationBarItem(
+              icon: const FaIcon(
+                FontAwesomeIcons.clipboardList,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '19arbcuu' /* Notice Board */,
+              ),
+              tooltip: '',
             ),
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: const FaIcon(
-              FontAwesomeIcons.clipboardList,
-              size: 24.0,
+            BottomNavigationBarItem(
+              icon: const Icon(
+                Icons.school_outlined,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'cwk4ool4' /* Write to school */,
+              ),
+              tooltip: '',
             ),
-            label: FFLocalizations.of(context).getText(
-              '19arbcuu' /* Notice Board */,
-            ),
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: const Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            label: FFLocalizations.of(context).getText(
-              '2ean18k4' /* Home */,
-            ),
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: const Icon(
-              Icons.school_outlined,
-              size: 24.0,
-            ),
-            label: FFLocalizations.of(context).getText(
-              'cwk4ool4' /* Write to school */,
-            ),
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: const Icon(
-              Icons.history_edu,
-              size: 24.0,
-            ),
-            label: FFLocalizations.of(context).getText(
-              'nhc18prv' /* Fees history */,
-            ),
-            tooltip: '',
-          )
-        ],
+            BottomNavigationBarItem(
+              icon: const Icon(
+                Icons.history_edu,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'nhc18prv' /* Fees history */,
+              ),
+              tooltip: '',
+            )
+          ],
+        ),
       ),
     );
   }

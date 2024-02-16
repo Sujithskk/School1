@@ -109,14 +109,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'testttt12',
           path: '/testttt12',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'testttt12')
-              : const Testttt12Widget(),
-        ),
-        FFRoute(
-          name: 'test333',
-          path: '/test333',
-          builder: (context, params) => const Test333Widget(),
+          builder: (context, params) => const Testttt12Widget(),
         ),
         FFRoute(
           name: 'newwwwww',
@@ -124,9 +117,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const NewwwwwwWidget(),
         ),
         FFRoute(
-          name: 'drawerrrrrrrr2021',
-          path: '/drawerrrrrrrr2021',
-          builder: (context, params) => const Drawerrrrrrrr2021Widget(),
+          name: 'sujiii123',
+          path: '/sujiii123',
+          builder: (context, params) => const Sujiii123Widget(),
+        ),
+        FFRoute(
+          name: 'kumar',
+          path: '/kumar',
+          builder: (context, params) => const KumarWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

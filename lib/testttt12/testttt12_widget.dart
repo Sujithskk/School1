@@ -1,5 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/drawer2022_widget.dart';
+import '/components/nav_bar1_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -8,6 +9,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'testttt12_model.dart';
@@ -58,85 +60,108 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        drawer: Drawer(
-          elevation: 16.0,
-          child: wrapWithModel(
-            model: _model.drawer2022Model,
-            updateCallback: () => setState(() {}),
-            child: const Drawer2022Widget(),
-          ),
-        ),
-        appBar: AppBar(
-          backgroundColor: const Color(0xFFB80900),
-          automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.white,
-              size: 30.0,
+        drawer: InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () async {
+            Navigator.pop(context);
+          },
+          child: Drawer(
+            elevation: 16.0,
+            child: wrapWithModel(
+              model: _model.drawer2022Model,
+              updateCallback: () => setState(() {}),
+              updateOnChange: true,
+              child: const Drawer2022Widget(),
             ),
-            onPressed: () async {
-              scaffoldKey.currentState!.openDrawer();
-            },
           ),
-          title: Stack(
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    FFAppState().username,
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
-                  ),
-                  Expanded(
-                    child: Align(
-                      alignment: const AlignmentDirectional(1.0, 0.0),
-                      child: FlutterFlowLanguageSelector(
-                        width: 120.0,
-                        height: 26.0,
-                        backgroundColor: const Color(0xFFB80900),
-                        borderColor: Colors.transparent,
-                        dropdownIconColor: Colors.white,
-                        borderRadius: 8.0,
-                        textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.normal,
-                          fontSize: 13.0,
-                        ),
-                        hideFlags: true,
-                        flagSize: 24.0,
-                        flagTextGap: 8.0,
-                        currentLanguage:
-                            FFLocalizations.of(context).languageCode,
-                        languages: FFLocalizations.languages(),
-                        onChanged: (lang) => setAppLanguage(context, lang),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
-                    child: Icon(
-                      Icons.notifications_sharp,
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                      size: 24.0,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          actions: const [],
-          centerTitle: false,
-          elevation: 2.0,
         ),
+        appBar: responsiveVisibility(
+          context: context,
+          tabletLandscape: false,
+          desktop: false,
+        )
+            ? AppBar(
+                backgroundColor: const Color(0xFFB80900),
+                automaticallyImplyLeading: false,
+                leading: FlutterFlowIconButton(
+                  borderColor: Colors.transparent,
+                  borderRadius: 30.0,
+                  borderWidth: 1.0,
+                  buttonSize: 60.0,
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                    size: 30.0,
+                  ),
+                  onPressed: () async {
+                    scaffoldKey.currentState!.openDrawer();
+                  },
+                ),
+                title: Stack(
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Text(
+                          FFAppState().username,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: 'Inter',
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                useGoogleFonts:
+                                    GoogleFonts.asMap().containsKey('Inter'),
+                              ),
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: const AlignmentDirectional(1.0, 0.0),
+                            child: FlutterFlowLanguageSelector(
+                              width: 120.0,
+                              height: 26.0,
+                              backgroundColor: const Color(0xFFB80900),
+                              borderColor: Colors.transparent,
+                              dropdownIconColor: Colors.white,
+                              borderRadius: 8.0,
+                              textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 13.0,
+                              ),
+                              hideFlags: true,
+                              flagSize: 24.0,
+                              flagTextGap: 8.0,
+                              currentLanguage:
+                                  FFLocalizations.of(context).languageCode,
+                              languages: FFLocalizations.languages(),
+                              onChanged: (lang) =>
+                                  setAppLanguage(context, lang),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              4.0, 0.0, 0.0, 0.0),
+                          child: Icon(
+                            Icons.notifications_sharp,
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            size: 24.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                actions: const [],
+                centerTitle: false,
+                elevation: 2.0,
+              )
+            : null,
         body: SafeArea(
           top: true,
           child: Column(
@@ -196,6 +221,10 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                     color: const Color(0xFFB80900),
                                                     fontSize: 16.0,
                                                     fontWeight: FontWeight.w600,
+                                                    useGoogleFonts:
+                                                        GoogleFonts.asMap()
+                                                            .containsKey(
+                                                                'Inter'),
                                                   ),
                                             ),
                                           ),
@@ -228,6 +257,9 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                 .override(
                                                   fontFamily: 'Inter',
                                                   color: const Color(0xFFB80900),
+                                                  useGoogleFonts:
+                                                      GoogleFonts.asMap()
+                                                          .containsKey('Inter'),
                                                 ),
                                           ),
                                         ),
@@ -283,6 +315,11 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                           fontFamily: 'Inter',
                                                           color: Colors.black,
                                                           fontSize: 14.0,
+                                                          useGoogleFonts:
+                                                              GoogleFonts
+                                                                      .asMap()
+                                                                  .containsKey(
+                                                                      'Inter'),
                                                         ),
                                                   ),
                                                 ),
@@ -315,6 +352,10 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                         fontFamily: 'Inter',
                                                         color: Colors.black,
                                                         fontSize: 14.0,
+                                                        useGoogleFonts:
+                                                            GoogleFonts.asMap()
+                                                                .containsKey(
+                                                                    'Inter'),
                                                       ),
                                                 ),
                                               ),
@@ -345,6 +386,10 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                       .override(
                                                         fontFamily: 'Inter',
                                                         fontSize: 14.0,
+                                                        useGoogleFonts:
+                                                            GoogleFonts.asMap()
+                                                                .containsKey(
+                                                                    'Inter'),
                                                       ),
                                                 ),
                                               ),
@@ -375,6 +420,10 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                       .override(
                                                         fontFamily: 'Inter',
                                                         fontSize: 14.0,
+                                                        useGoogleFonts:
+                                                            GoogleFonts.asMap()
+                                                                .containsKey(
+                                                                    'Inter'),
                                                       ),
                                                 ),
                                               ),
@@ -422,10 +471,19 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily,
                                                   color: Colors.white,
                                                   fontSize: 13.0,
                                                   fontWeight: FontWeight.w500,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMediumFamily),
                                                 ),
                                           ),
                                         ),
@@ -451,10 +509,18 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Readex Pro',
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily,
                                                 color: Colors.white,
                                                 fontSize: 13.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ],
@@ -504,8 +570,16 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Readex Pro',
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ),
@@ -622,6 +696,9 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                               color: Colors.white,
                                               fontSize: 13.0,
                                               fontWeight: FontWeight.w500,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey('Inter'),
                                             ),
                                       ),
                                     ),
@@ -663,6 +740,9 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                 color: Colors.white,
                                                 fontSize: 13.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts:
+                                                    GoogleFonts.asMap()
+                                                        .containsKey('Inter'),
                                               ),
                                         ),
                                       ),
@@ -787,6 +867,10 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                                 fontFamily:
                                                                     'Inter',
                                                                 fontSize: 14.0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        'Inter'),
                                                               ),
                                                         ),
                                                         trailing: const Icon(
@@ -857,6 +941,9 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                               color: Colors.white,
                                               fontSize: 13.0,
                                               fontWeight: FontWeight.w500,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey('Inter'),
                                             ),
                                       ),
                                     ),
@@ -894,10 +981,18 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Readex Pro',
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily,
                                                 color: Colors.white,
                                                 fontSize: 13.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ),
@@ -1022,6 +1117,10 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                                       'Inter',
                                                                   fontSize:
                                                                       14.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          'Inter'),
                                                                 ),
                                                           ),
                                                           subtitle: Text(
@@ -1033,10 +1132,16 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                                                                     .of(context)
                                                                 .labelMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelMediumFamily,
                                                                   fontSize:
                                                                       13.0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .labelMediumFamily),
                                                                 ),
                                                           ),
                                                           trailing: const Icon(
@@ -1070,6 +1175,11 @@ class _Testttt12WidgetState extends State<Testttt12Widget> {
                     ],
                   ),
                 ),
+              ),
+              wrapWithModel(
+                model: _model.navBar1Model,
+                updateCallback: () => setState(() {}),
+                child: const NavBar1Widget(),
               ),
             ],
           ),
